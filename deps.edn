@@ -1,0 +1,14 @@
+{:deps {org.clojure/clojure {:mvn/version "1.9.0"}
+        alandipert/storage-atom {:mvn/version "2.0.1"}}
+ :aliases {:fig {:extra-deps
+                  {org.clojure/clojurescript {:mvn/version "1.10.339"}
+                   com.bhauman/rebel-readline-cljs {:mvn/version "0.1.4"}
+                   com.bhauman/figwheel-main {:mvn/version "0.1.5"}
+                   reagent {:mvn/version "0.7.0"}
+                   com.cognitect/transit-cljs {:mvn/version "0.8.256"}
+                   cljsjs/plotly {:mvn/version "1.36.1-0"}
+                   cljs-http {:mvn/version "0.1.45"}}
+                 :extra-paths ["resources" "target"]
+                 :main-opts ["-m" "figwheel.main"]}
+           :build {:main-opts ["-m" "figwheel.main" "-b" "dev" "-r"]}
+           :min   {:main-opts ["-m" "figwheel.main" "-O" "advanced" "-bo" "dev"]}}}
